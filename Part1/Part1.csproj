@@ -71,8 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="View\iTunesSearch.aspx" />
+    <Content Include="View\MovieDisplay.aspx" />
     <Content Include="View\MusicResults.aspx" />
-    <Content Include="View\MusicResultsMore.aspx" />
+    <Content Include="View\SoftwareDisplay.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +92,13 @@
     <Compile Include="Model\SoftwareResults.cs" />
     <Compile Include="Model\Track.cs" />
     <Compile Include="Model\Software.cs" />
+    <Compile Include="View\MovieDisplay.aspx.cs">
+      <DependentUpon>MovieDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MovieDisplay.aspx.designer.cs">
+      <DependentUpon>MovieDisplay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\MusicResults.aspx.cs">
       <DependentUpon>MusicResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -98,12 +106,12 @@
     <Compile Include="View\MusicResults.aspx.designer.cs">
       <DependentUpon>MusicResults.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\MusicResultsMore.aspx.cs">
-      <DependentUpon>MusicResultsMore.aspx</DependentUpon>
+    <Compile Include="View\SoftwareDisplay.aspx.cs">
+      <DependentUpon>SoftwareDisplay.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\MusicResultsMore.aspx.designer.cs">
-      <DependentUpon>MusicResultsMore.aspx</DependentUpon>
+    <Compile Include="View\SoftwareDisplay.aspx.designer.cs">
+      <DependentUpon>SoftwareDisplay.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

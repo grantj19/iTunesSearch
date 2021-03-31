@@ -12,8 +12,10 @@
         &nbsp;Search:<br />
 &nbsp;<asp:TextBox ID="searchTbx" runat="server" ></asp:TextBox>
             <br />
+            <br />
             <asp:DropDownList ID="searchDdl" runat="server">
             </asp:DropDownList>
+            <br />
             <br />
             <asp:Button ID="searchBtn" runat="server" Text="Search" OnClick="searchBtn_Click" />
             <br />

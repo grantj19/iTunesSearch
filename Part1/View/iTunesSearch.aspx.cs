@@ -52,9 +52,11 @@ namespace Part1.View
                     break;
                 case "movie":
                     JsonMovie = JsonConvert.DeserializeObject<MovieResults>(jsonString);
+                    Response.Redirect("MovieDisplay.aspx");
                     break;
                 case "software":
                     JsonSoftware = JsonConvert.DeserializeObject<SoftwareResults>(jsonString);
+                    Response.Redirect("SoftwareDisplay.aspx");
                     break;
                 default:
                     throw new NotImplementedException();

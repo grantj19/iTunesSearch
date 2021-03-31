@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MusicResults.aspx.cs" Inherits="Part1.View.MusicResults" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MovieResults.aspx.cs" Inherits="Part1.View.MovieDisplay" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
         <asp:Button ID="backBtn" runat="server" Text="<- Back" OnClick="backBtn_Click" /> <br/>
 
         <asp:DataList ID="musicDl" runat="server" CellPadding="4" ForeColor="#333333" RepeatDirection="Horizontal" RepeatColumns="5" HorizontalAlign="Left" OnItemCommand="DataList_ItemCommand">
@@ -25,7 +24,7 @@
             <ItemTemplate>
                 <div style="max-width: 10vw">
                     <b><%# DataBinder.Eval(Container.DataItem, "TrackName") %> </b><br/>
-                    <%# DataBinder.Eval(Container.DataItem, "CollectionName") %><br />
+                    <%# DataBinder.Eval(Container.DataItem, "ContentRating") %><br />
                     <asp:Image runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "ArtworkURL") %>'/><br />
                     <asp:Button runat="server" Text="More Info"></asp:Button>
                 </div>
@@ -34,16 +33,15 @@
             <SelectedItemTemplate>
                 <div style="max-width: 20vw">
                     <div style="align-items: center"><b><%# DataBinder.Eval(Container.DataItem, "TrackName") %> </b></div><br/><br/>
-                    <b>Artist Name: </b><%# DataBinder.Eval(Container.DataItem, "ArtistName") %><br/><br/>
-                    <b>Collection Name: </b><%# DataBinder.Eval(Container.DataItem, "CollectionName") %><br /><br/>
-                    <b>Track Price: </b><%# DataBinder.Eval(Container.DataItem, "TrackPrice") %><br /><br/>
-                    <b>Collection Price: </b><%# DataBinder.Eval(Container.DataItem, "CollectionPrice") %><br /><br/>
+                    <b>Content Rating: </b><%# DataBinder.Eval(Container.DataItem, "ContentRating") %><br/><br/>
+                    <b>Description: </b><%# DataBinder.Eval(Container.DataItem, "LongDescription") %><br /><br/>
+                    <b>Genre: </b><%# DataBinder.Eval(Container.DataItem, "PrimaryGenreName") %><br /><br/>
+                    <b>Price: </b><%# DataBinder.Eval(Container.DataItem, "TrackHdPrice") %><br /><br/>
                     <asp:Image runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "ArtworkURL") %>'/><br />
                 </div>
             </SelectedItemTemplate>
 
         </asp:DataList>
-
     </form>
 </body>
 </html>
