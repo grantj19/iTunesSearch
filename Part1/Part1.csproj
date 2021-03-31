@@ -72,6 +72,7 @@
   <ItemGroup>
     <Content Include="View\iTunesSearch.aspx" />
     <Content Include="View\MusicResults.aspx" />
+    <Content Include="View\MusicResultsMore.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +97,13 @@
     </Compile>
     <Compile Include="View\MusicResults.aspx.designer.cs">
       <DependentUpon>MusicResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\MusicResultsMore.aspx.cs">
+      <DependentUpon>MusicResultsMore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MusicResultsMore.aspx.designer.cs">
+      <DependentUpon>MusicResultsMore.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

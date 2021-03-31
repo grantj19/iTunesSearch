@@ -7,6 +7,6 @@
         public string ArtistName { get; set; }
         public double TrackPrice { get; set; }
         public double CollectionPrice { get; set; }
-        public string ArtworkUrl { get; set; }
+        public string ArtworkUrl60 { get; set; }
     }
 }
